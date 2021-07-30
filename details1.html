@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <script src="https://kit.fontawesome.com/6b45f6e9d4.js" crossorigin="anonymous">
+        </script>
+        <style type="text/css">
+        body{
+        background-color:#FFFFFF;
+        margin:0px;
+        padding:0px;}
+        ul{
+        list-style:none;
+        }
+        a{text-decoration:none;
+        }
+        nav{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        height:60px;
+        background-color:#cccccc;
+        box-shadow:20px 2px 13px rgba(0,0,0,0.2);
+        padding:0px 5%;
+        }
+        nav ul{
+        display:flex;
+        }
+        nav ul li a{
+        margin:20px;
+        font-family:myriad pro regular;
+        color:#505050;
+        font-size:15px;
+        font-weight:700;
+        
+        }
+        .logo{
+        font-family:RoadTest;
+        color:#000000;
+        font-size:22px;
+        }
+        .active{
+        font-weight:bold;
+        color:#2d2a2a;
+        }
+        .aboutcontainer{
+        width:80%;
+        height:460px;
+        display:flex;
+        background-color:#cccccc;
+        border-radius:20px;
+        box-shadow:2px 2px 12px rgba(0,0,0,0.2);
+        margin:-7% auto 20px auto;
+        position:relative;
+        }
+        .aboutcontainer img{
+        margin-top:110px;
+        height:250px;
+       
+        
+        }
+        .abouttext{
+        width:550px;
+        margin-left:200px;
+        
+        position: absolute;
+        }
+        
+        .abouttext p:nth-child(1){
+        color:#403e3e;
+        margin-left:50px;
+        margin-top:50px;
+        font-family:myriad pro;
+        font-weight:bold;
+        font-size:23px;
+        line-height:0px;
+        }
+        .abouttext p:nth-child(2){
+        margin:50px;
+        color:#3e3d3d;
+        font-family:calibri;
+        font-size:16px;
+        }
+       button {
+       margin-top:120px;
+       margin-left:25px;
+       margin-right:25px;
+       float:left;
+       height:50px;
+       width:100px;
+       background-color:#000000;
+       border:2px solid #373636;
+       border-radius:10px;
+       color:#FFFFFF;
+     
+       }
+     
+      .imageslider img {
+    
+       height:200px;
+       width:300px;
+       margin-top:50px;
+       margin-left:100px;
+       margin-right:80px;
+    
+       
+    
+       }
+       section{
+       margin-top:600px;
+       margin-left:0px;
+       height:400px;
+       width:100%;
+       position:absolute;
+       background-color:#cccccc;
+       border-radius:20px;
+       box-shadow:2px 2px 12px rgba(0,0,0,0.2);
+       }
+       .imageslider{
+       margin-bottom:300px;
+
+
+       }
+       .buttons{
+           display:flex;
+       }
+       .imageslider p{
+       font-size:23px;
+       font-style:myriad pro;
+       font-weight:bold;
+       color:#403e3e;
+       text-align:center;
+       margin-top:30px;
+       }
+       footer{
+       height:250px;
+       width:100%;
+       margin-top:1100px;
+       margin-left:-200px;
+    
+
+       position:scroll;
+       background-color:#FFFFFF;
+       align-items:center;
+       }
+       footer p{
+       font-family:calibri;
+       text-align :center;
+       }
+       footer p:nth-child(1){
+       font-size:30px;
+       font-weight:bold;
+       color:#191919;
+       line-height:0px;
+       text-align: center;
+       
+       }
+       footer p:nth-child(2){
+       font-size:16px;
+       color:#7e7d7d;
+       
+       text-align:center;
+       
+       }
+       .socialicons a:nth-child(1){
+       margin-right:100px;
+       margin-top:-10px;
+       height:70px;
+       width:70px;
+       }
+       .socialicons a:nth-child(6){
+       margin-left:120px;
+       margin-top:-10px;
+       
+       height:70px;
+       width:70px;
+       }
+       .socialicons a{
+       width:40px;
+       height:40px;
+       display:flex;
+       justify-content:center;
+       align-items:center;
+       background-color:#000000;
+       margin:20px 10px;
+       border-radius:50%;
+       }
+       .socialicons{
+       display:flex;
+       margin-left:110px;
+       
+       }
+       .socialicons i{
+       color:#FFFFFF;
+       }
+       .socialicons a:hover{
+       background-color:#FFFFFF;
+       box-shadow:2px 2px 12px rgba(0,0,0,0.2);
+       transition:all ease 0.5s;
+       }
+       .socialicons a:hover i{
+       color:#000000;
+       box-shadow:2px 2px 12px rgba(0,0,0,0.2);
+       transition:all ease 0.5s;
+       }
+       </style>
+       <script type="text/javascript">
+     
+
+        
+        var images = [
+        'https://dl.dropbox.com/s/mxq4ddxwsqff5nm/IMG_20201126_122652.jpg?dl=0', 
+        'https://dl.dropbox.com/s/q4nz0kdsbgkpoup/SAVE_20201126_123555.jpg?dl=0', 
+        'https://dl.dropbox.com/s/7p114es3evxanxq/CSS_certificate.jpg?dl=0',
+        'https://dl.dropbox.com/s/8049ft23fga9e39/HTML_certificate.jpg?dl=0',
+        'https://dl.dropbox.com/s/20tkq25rzqwvy5k/JavaScript_certificate.jpg?dl=0'
+        ];
+        var num = 0;
+        function next() {
+        var slider = document.getElementById('slider');
+        num++;
+        if(num >= images.length) {
+        num = 0;
+        }
+        slider.src = images[num];
+        }
+        function prev() {
+        var slider = document.getElementById('slider');
+        num--;
+        if(num < 0) {
+        num = images.length-1;
+        }
+        slider.src = images[num];
+        }
+        </script>
+    </head>
+    <body>
+    <header>
+    <nav><a href="#" class="logo">My Resume</a>
+    <ul>
+    <li><a href="resumecopy.html" class="active">Home</a></li>
+    <li><a href="participation1.html">Participation</a></li>
+    <li><a href="achievements1.html">Achievements</a></li>
+    <li><a href="details1.html">Personal Details</a></li>
+    </ul>
+    </nav>
+    </header><br><br><br><br><br><br><br>
+        <div class="aboutcontainer">
+<img src="https://dl.dropbox.com/s/vm94kye36odtfb2/IMG_20201130_211933.jpg?dl=0"> 
+<div class="abouttext">
+<p>Personal Details</p>
+    
+<p>	<br>Father Name              :    G Mohan<br><br>
+ Permanent Address      :    Door. No: 11-154/8,Muthunagar, Tiruchanur,Tirupati,
+                                           Chittoor,Andhra Pradesh,517503.<br><br>
+ Date of Birth                :    02/05/1999<br><br>
+ Languages Known       :    Telugu & English<br><br>
+ Nationality                   :    INDIAN<br><br>
+ Hobbies                        :    Listening Music, Jogging, Sports.
+
+</p>
+    
+</div>
+<section>
+<div class="imageslider">
+<p>Certificates</p>
+<div class="buttons">
+            <button onclick="prev()"> Prev </button>
+            <img id="slider" src="https://dl.dropbox.com/s/jifly882yxxlgk1/IMG_20201208_114433.jpg?dl=0" width="100px" height="100px"/>
+            <button onclick="next()"> Next </button></div>
+        </div>
+        </section>
+<footer>
+<p>Contact Me</p>
+        <p>Join with me in social media</p>
+        <div class="socialicons">
+        <a href="tel:9550370506"><i class="fa fa-phone"></i></a>
+        <a href="https://www.facebook.com/nithin.sai.50159"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://mobile.twitter.com/gmnithinsai1"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/iam_nithin1?igshid=171kewckuo5xw"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/gmnithinsai2599"><i class="fa fa-linkedin-square"></i></a>
+        <a href="mailto:gmnithinsai2599@gmail.com"><i class="fa fa-envelope"></i></a>
+        </div>
+        <p>Copyright by going to gmnithinsai</p>
+        </footer>
+    </body>
+</html>
